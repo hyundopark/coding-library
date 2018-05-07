@@ -1,5 +1,5 @@
 # Snippets
 *Dropdown System.
 ..*test
-..*Module Implemented: https://github.com/JedWatson/classnames
+..*Module Implemented: [classNames]: https://github.com/JedWatson/classnames
 
