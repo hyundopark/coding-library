@@ -5,16 +5,15 @@ import WizardGrid from "../widgets/WidgetGrid";
 import JarvisWidget from "../widgets/JarvisWidget";
 import PageHeader from "../PageHeader";
 import headerObject from "../../constants/page-header.js";
-import {connect} from "react-redux";
-import { addDogOwner }  from "../../actions/dogOwners"
+import { connect } from "react-redux";
+import { addDogOwner } from "../../actions/dogOwners";
 
 class DogOwners extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      dogOwners: [],
-
+      dogOwners: []
     };
     this.onCancel = this.onCancel.bind(this);
     this.onDelete = this.onDelete.bind(this);
@@ -27,7 +26,7 @@ class DogOwners extends React.Component {
     this.setState({
       formData: item
     });
-    this.props.onAddDogOwner(item)
+    this.props.onAddDogOwner(item);
   }
 
   onSave(updatedFormData) {
@@ -81,9 +80,12 @@ class DogOwners extends React.Component {
   render() {
     const dogOwners = this.state.dogOwners ? (
       this.state.dogOwners.map(dogOwner => (
-        <li key={dogOwner._id} onClick={this.onSelect.bind(this, dogOwner)}>
-          Name:{dogOwner.name} {dogOwner.lastName}
-        </li>
+        <tr key={dogOwner._id} onClick={this.onSelect.bind(this, dogOwner)}>
+          <td>
+            Name:{dogOwner.firstName}" "{dogOwner.lastName}
+          </td>
+          <td>Age: {dogOwner.age}</td>
+        </tr>
       ))
     ) : (
       <React.Fragment />
@@ -112,7 +114,10 @@ class DogOwners extends React.Component {
         </div>
 
         <div id="content">
-          <PageHeader pageHeaderName={headerObject.dogOwnersCrud.pageHeader} subtitle={headerObject.dogOwnersCrud.subTitle}/>
+          <PageHeader
+            pageHeaderName={headerObject.dogOwnersCrud.pageHeader}
+            subtitle={headerObject.dogOwnersCrud.subTitle}
+          />
           <WizardGrid>
             <div className="row">
               <article className="col-sm-12 col-md-12 col-lg-6">
@@ -153,8 +158,8 @@ class DogOwners extends React.Component {
   }
 }
 
-const mapDispatchToProps= dispatch=>({
-  onAddDogOwner: dogOwner=>{
+const mapDispatchToProps = dispatch => ({
+  onAddDogOwner: dogOwner => {
     dispatch(addDogOwner(dogOwner));
   }
 });
