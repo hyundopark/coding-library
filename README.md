@@ -1,5 +1,5 @@
 # Snippets
-### Samples of the project I worked on recently. MERN Stack.
+### Samples of the project I worked on recently using MERN stack.
 #### Dropdown Component
 * Reusuable.
 * Dynamically update the list as the database changes.
@@ -19,3 +19,5 @@
 * Following single responsibility principle, divded out the middleware. (Express.js)
 * Built back-end service using MongoDB.
 
+#### Notification System
+* coming up with in 3 days.
