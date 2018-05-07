@@ -1,5 +1,6 @@
-## Snippets
-### React Dropdown Component
+# Snippets
+### Samples of the project I worked on recently
+#### React Dropdown Component
 * Reusuable
 * Dynamically update the list as the database changes.
 * Using classNames module to match the css styles with the stlying template.
