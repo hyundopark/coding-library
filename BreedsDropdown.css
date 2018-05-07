@@ -1,0 +1,8 @@
+.infowizard{
+    color:#999;
+    padding:"6px";
+};
+.infowizard-selected{
+    color: #555;
+    padding: "6px" 
+}
