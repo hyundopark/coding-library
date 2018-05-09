@@ -1,7 +1,5 @@
 const mongodb = require("../mongodb");
 const conn = mongodb.connection;
-const ObjectId = mongodb.ObjectId;
-const moment = require("moment");
 
 module.exports = {
   // ..contribution by a team member goes in this line..
