@@ -20,4 +20,7 @@
 * Built back-end service using MongoDB.
 
 #### Notification System
-* coming up with in 3 days.
+* Notifiction back-end logics.
+* Used MongoDB aggregation pipelines to read and alter data from the database.
+* Utilized Sengrid to send email notifications.
+* Similiar logics were implemented for middleware(Express) but excluded here.
